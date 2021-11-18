@@ -1,2 +1,5 @@
 # supervised_machine_learning
-being uploaded soon
+
+This project takes financial data from 2019 to predict the credit risk of loans from the first quarter of 2020. First, some preprocessing is done to convert categorical data to numeric values, as well as make a matching number of columns in both the training and testing sets since pd.get_dummies exludes a column due to there being a column with only one value in the testing dataframe, while that column has two values in the training dataframe. From there, both a logistic regression model and a random forest machine learning model are fitted and run on the data. I predicted that logistic regression would be more accurate, since the model is analyzing large amounts of data to make a determination in classification. It turns out I was correct once the data was scaled, though with unscaled data random forest was more accurate (likely due to one or more columns having large numeric values and having an outsized influence on the machine learning model before scaling).
+
+After running the unscaled models, I than scaled the data and ran the same models again. The random forest model showed very marginal improvement, while the logistic regression became about 25% more accurate.
